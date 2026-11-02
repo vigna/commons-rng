@@ -686,7 +686,16 @@ public enum RandomSource {
      * </ul>
      * @since 1.7
      */
-    PHILOX_4X64(ProviderBuilder.RandomSourceInternal.PHILOX_4X64);
+    PHILOX_4X64(ProviderBuilder.RandomSourceInternal.PHILOX_4X64),
+    /**
+     * Source of randomness is {@link org.apache.commons.rng.core.source64.MWC192X}.
+     * <ul>
+     *  <li>Native seed type: {@code long[]}.</li>
+     *  <li>Native seed size: 3.</li>
+     * </ul>
+     * @since 1.8
+     */
+    MWC_192X(ProviderBuilder.RandomSourceInternal.MWC_192X);
 
 
     /** Internal identifier. */

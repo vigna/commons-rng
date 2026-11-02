@@ -46,6 +46,7 @@ import org.apache.commons.rng.core.source32.PcgXshRs32;
 import org.apache.commons.rng.core.source32.DotyHumphreySmallFastCounting32;
 import org.apache.commons.rng.core.source32.PcgMcgXshRr32;
 import org.apache.commons.rng.core.source32.PcgMcgXshRs32;
+import org.apache.commons.rng.core.source64.MWC192X;
 import org.apache.commons.rng.core.source64.Philox4x64;
 import org.apache.commons.rng.core.source64.SplitMix64;
 import org.apache.commons.rng.core.source64.XorShift1024Star;
@@ -170,6 +171,7 @@ public final class ProvidersList {
             LIST64.add(new L128X256Mix(new long[] {g.nextLong(), g.nextLong(), g.nextLong(), g.nextLong()}));
             LIST64.add(new L128X1024Mix(new long[] {g.nextLong(), g.nextLong(), g.nextLong(), g.nextLong()}));
             LIST64.add(new Philox4x64(new long[] {g.nextLong(), g.nextLong()}));
+            LIST64.add(new MWC192X(new long[] {g.nextLong(), g.nextLong(), g.nextLong()}));
             // ... add more here.
 
             // Do not modify the remaining statements.

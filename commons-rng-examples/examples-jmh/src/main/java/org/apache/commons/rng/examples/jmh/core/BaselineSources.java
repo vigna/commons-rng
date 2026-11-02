@@ -116,7 +116,8 @@ public abstract class BaselineSources {
             "L128_X1024_MIX",
             "L32_X64_MIX",
             "PHILOX_4X32",
-            "PHILOX_4X64"})
+            "PHILOX_4X64",
+            "MWC_192X"})
     private String randomSourceName;
 
     /** RNG. */

@@ -76,6 +76,7 @@ import org.apache.commons.rng.core.source64.L128X1024Mix;
 import org.apache.commons.rng.core.source64.L128X128Mix;
 import org.apache.commons.rng.core.source64.L128X256Mix;
 import org.apache.commons.rng.core.source64.Philox4x64;
+import org.apache.commons.rng.core.source64.MWC192X;
 
 /**
  * RNG builder.
@@ -448,7 +449,10 @@ public final class ProviderBuilder {
             6, 0, 2, NativeSeedType.INT_ARRAY),
         /** Source of randomness is {@link Philox4x64}. */
         PHILOX_4X64(Philox4x64 .class,
-            6, 0, 2, NativeSeedType.LONG_ARRAY);
+            6, 0, 2, NativeSeedType.LONG_ARRAY),
+        /** Source of randomness is {@link MWC192X}. */
+        MWC_192X(MWC192X.class,
+            3, NativeSeedType.LONG_ARRAY);
 
         /** Source type. */
         private final Class<? extends UniformRandomProvider> rng;
